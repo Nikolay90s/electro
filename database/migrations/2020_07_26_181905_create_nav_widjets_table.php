@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateNavigationsTable extends Migration
+class CreateNavWidjetsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class CreateNavigationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('navigations', function (Blueprint $table) {
+        Schema::create('navWidjets', function (Blueprint $table) {
             $table->id();
             $table->string('name', 50);
-            $table->string('link', 50);
+            $table->string('img', 50);
+            $table->bigInteger('nav_id')->unsigned();
+            $table->foreign('nav_id')->references('id')->on('navigations');
             $table->timestamps();
         });
     }
@@ -28,6 +30,6 @@ class CreateNavigationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('navigations');
+        Schema::dropIfExists('navWidjets');
     }
 }
