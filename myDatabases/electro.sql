@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Июл 25 2020 г., 21:56
+-- Время создания: Июл 26 2020 г., 16:30
 -- Версия сервера: 8.0.19
 -- Версия PHP: 7.4.5
 
@@ -55,7 +55,35 @@ CREATE TABLE `migrations` (
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (3, '2014_10_12_000000_create_users_table', 1),
 (4, '2014_10_12_100000_create_password_resets_table', 1),
-(5, '2019_08_19_000000_create_failed_jobs_table', 1);
+(5, '2019_08_19_000000_create_failed_jobs_table', 1),
+(6, '2020_07_26_115131_create_navigations_table', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `navigations`
+--
+
+CREATE TABLE `navigations` (
+  `id` bigint UNSIGNED NOT NULL,
+  `name` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `link` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `navigations`
+--
+
+INSERT INTO `navigations` (`id`, `name`, `link`, `created_at`, `updated_at`) VALUES
+(1, 'Home', 'index', NULL, NULL),
+(2, 'Hot Deals', 'hotDeals', NULL, NULL),
+(3, 'Categories', 'categories', NULL, NULL),
+(4, 'Laptops', 'laptops', NULL, NULL),
+(5, 'Smartphones', 'smartphones', NULL, NULL),
+(6, 'Cameras', 'cameras', NULL, NULL),
+(7, 'Accessories', 'accessories', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -110,6 +138,12 @@ ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `navigations`
+--
+ALTER TABLE `navigations`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `password_resets`
 --
 ALTER TABLE `password_resets`
@@ -136,7 +170,13 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT для таблицы `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT для таблицы `navigations`
+--
+ALTER TABLE `navigations`
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
