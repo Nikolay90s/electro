@@ -3,7 +3,7 @@
 <!-- /NAVIGATION -->
 
 <!-- SECTION -->
-		@include('electro.sections.vidjets.navWidjet')		
+		@include('electro.sections.vidjets.navWidjet')
 <!-- /SECTION -->
 
 		<!-- SECTION -->
@@ -39,7 +39,7 @@
 										<!-- product -->
 										<div class="product">
 											<div class="product-img">
-												<img src="./img/product01.png" alt="">
+												<img src="{{ asset('electro/img/product01.png') }}" alt="">
 												<div class="product-label">
 													<span class="sale">-30%</span>
 													<span class="new">NEW</span>
@@ -71,7 +71,7 @@
 										<!-- product -->
 										<div class="product">
 											<div class="product-img">
-												<img src="./img/product02.png" alt="">
+												<img src="{{ asset('electro/img/product02.png') }}" alt="">
 												<div class="product-label">
 													<span class="new">NEW</span>
 												</div>
@@ -102,7 +102,7 @@
 										<!-- product -->
 										<div class="product">
 											<div class="product-img">
-												<img src="./img/product03.png" alt="">
+												<img src="{{ asset('electro/img/product03.png') }}" alt="">
 												<div class="product-label">
 													<span class="sale">-30%</span>
 												</div>
@@ -128,7 +128,7 @@
 										<!-- product -->
 										<div class="product">
 											<div class="product-img">
-												<img src="./img/product04.png" alt="">
+												<img src="{{ asset('electro/img/product04.png') }}" alt="">
 											</div>
 											<div class="product-body">
 												<p class="product-category">Category</p>
@@ -156,7 +156,7 @@
 										<!-- product -->
 										<div class="product">
 											<div class="product-img">
-												<img src="./img/product05.png" alt="">
+												<img src="{{ asset('electro/img/product05.png') }}" alt="">
 											</div>
 											<div class="product-body">
 												<p class="product-category">Category</p>
