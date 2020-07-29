@@ -24,7 +24,8 @@ class CreateProductsTable extends Migration
             $table->bigInteger('categories_id')->unsigned();
             $table->foreign('categories_id')->references('id')->on('navigations');
             $table->string('cuantity', 20);
-            $table->integer('raiting', 5);
+            $table->string('raiting', 5);
+            $table->text('text');
             $table->timestamps();
         });
     }
