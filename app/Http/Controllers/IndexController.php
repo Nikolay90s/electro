@@ -18,7 +18,6 @@ class IndexController extends Controller
             
             $navs = $this->navigations->nav();
             $nw = $this->navigations->navWidjets();
-            dump($nw);
             
             $data = [
                 'navs' => $navs,
